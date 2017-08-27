@@ -7,7 +7,8 @@
 <script src="../build/ar.js"></script>
 <script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+	<div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
 	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - three.js mobile performance
 	<br/>
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
@@ -177,5 +178,11 @@
 			onRenderFct(deltaMsec/1000, nowMsec/1000)
 		})
 	})
-</script></body>
+</script>
+	<canvas width="1920" height="948" style="width: 1920px; height: 480px; position: absolute; top: 0px; left: 0px; margin-left: 0px;"></canvas>
+	<div style="position: fixed; top: 0px; left: 0px; cursor: pointer; opacity: 0.9; z-index: 10000;">
+		<canvas width="80" height="48" style="width: 80px; height: 48px; display: block;"></canvas>
+		<canvas width="80" height="48" style="width: 80px; height: 48px; display: none;"></canvas>
+	</div>
+</body>
 </html>
