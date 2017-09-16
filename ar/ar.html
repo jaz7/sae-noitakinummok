@@ -124,38 +124,25 @@
 		var arWorldRoot = smoothedRoot
 
 		// add a torus knot
-		var geometry	= new THREE.CubeGeometry(2,2,2);
+		var geometry	= new THREE.CubeGeometry(1,1,1);
 		var material	= new THREE.MeshNormalMaterial({
 			transparent : true,
 			opacity: 0.5,
 			side: THREE.DoubleSide
 		});
+
 		var mesh	= new THREE.Mesh( geometry, material );
 		mesh.position.y	= geometry.parameters.height/2
 		arWorldRoot.add( mesh );
 
-		//heart shape test
-        var sidex = 0, sidey = 0;
-
-        var heartShape = new THREE.Shape();
-
-        heartShape.moveTo( sidex + 0.5, sidey + 0.5 );
-        heartShape.bezierCurveTo( sidex + 0.5, sidey + 0.5, sidex + 0.4, sidey, sidex, sidey );
-        heartShape.bezierCurveTo( sidex - 0.6, sidey, sidex - 0.6, sidey + 0.7,sidex - 0.6, sidey + 0.7 );
-        heartShape.bezierCurveTo( sidex - 0.6, sidey + 1.1, sidex - 0.3, sidey + 1.54, sidex + 0.5, sidey + 1.9 );
-        //heartShape.bezierCurveTo( sidex + 1.2, sidey + 1.54, sidex + 1.6, sidey + 1.1, sidex + 1.6, sidey + 0.7 );
-        //heartShape.bezierCurveTo( sidex + 1.6, sidey + 0.7, sidex + 1.6, sidey, sidex + 1, sidey );
-        //heartShape.bezierCurveTo( sidex + 0.7, sidey, sidex + 0.5, sidey + 0.5, sidex + 0.5, sidey + 0.5 );
-
-		var geometry	= new THREE.ShapeGeometry( heartShape );
+		var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
 		var material	= new THREE.MeshNormalMaterial();
 		var mesh	= new THREE.Mesh( geometry, material );
 		mesh.position.y	= 0.5
 		arWorldRoot.add( mesh );
 
-		//having it rotating
 		onRenderFcts.push(function(){
-			mesh.rotation.y += 0.1
+			mesh.rotation.x += 0.1
 		})
 
 		//////////////////////////////////////////////////////////////////////////////////
