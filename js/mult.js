@@ -84,7 +84,7 @@
 			}
 		}
 	}
-	c = $("#sky"),
+	var c = document.getElementById('sky'),
 	background = function(){
 		var grdnt = ctx.createLinearGradient(0, 0, 0, c.height);
 		ctx.fillStyle = grdnt;
