@@ -87,9 +87,6 @@
 	c = $("#sky"),
 	background = function(){
 		var grdnt = ctx.createLinearGradient(0, 0, 0, c.height);
-		//grdnt.addColorStop(0, "#000"); (ausblenden der Farben)
-		//grdnt.addColorStop(.5, "#135288");(Hintergrundbild Bild-
-		//grdnt.addColorStop(1, "#0C5663");in Css einfügen)
 		ctx.fillStyle = grdnt;
 		ctx.fillRect(0, 0, c.width, c.height);
 	},
